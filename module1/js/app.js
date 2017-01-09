@@ -5,7 +5,7 @@
   LunchCheckController.$inject = ['$scope'];
   function LunchCheckController ($scope) {
     $scope.foodItems = "";
-    $scope.message = "This is my message";
+    $scope.message = "";
     $scope.calculateIfTooMuch = function () {
       if ($scope.foodItems) {
         var arr = $scope.foodItems.split(",");
