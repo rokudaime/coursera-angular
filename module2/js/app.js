@@ -14,7 +14,7 @@
     }
 
   }
-
+  AlreadyBoughtController.$inject = ['shoppingListCheckOffService'];
   function AlreadyBoughtController (shoppingListCheckOffService) {
     var bought = this;
 
@@ -24,7 +24,13 @@
   function ShoppingListCheckOffService () {
     var service = this;
 
-    var itemsToBuy = [{name: "meat", quantity: "1 kilogramm"}, {name: "milk", quantity: "2 packs"}, {name: "soda", quantity: "5 bottles"}, {name: "pepto bismol", quantity: 16}, {name: "chips", quantity: "10 bags"},];
+    var itemsToBuy = [
+                        {name: "meat", quantity: "1 kilogram"},
+                        {name: "milk", quantity: "2 packs"},
+                        {name: "soda", quantity: "5 bottles"},
+                        {name: "cookies", quantity: 16},
+                        {name: "chips", quantity: "10 bags"}
+                     ];
     var alreadyBoughtItems = [];
     service.getItemsToBuyList = function () {
       return itemsToBuy;
