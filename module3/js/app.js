@@ -2,7 +2,7 @@
   angular.module('NarrowItDownApp', [])
   .controller('NarrowItDownController', NarrowItDownController)
   .service('MenuSearchService', MenuSearchService)
-  .constant('ApiBasePath', 'http://davids-restaurant.herokuapp.com')
+  .constant('ApiBasePath', '//davids-restaurant.herokuapp.com')
   .directive('foundItems', FoundItems);
 
   function FoundItems () {
