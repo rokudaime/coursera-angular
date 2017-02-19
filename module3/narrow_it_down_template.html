@@ -1,4 +1,5 @@
-<h3 ng-if="narrowedMenu.foundItems">Results: {{ narrowedMenu.foundItems.length }}</h3>
+<h3 ng-if="narrowedMenu.foundItems.length > 0">Results: {{ narrowedMenu.foundItems.length }}</h3>
+<h3 ng-if="narrowedMenu.foundItems.length == 0">nothing found</h3>
 <ul>
   <li  class="menu-item" ng-repeat="menuItem in narrowedMenu.foundItems">
     <div class="row">

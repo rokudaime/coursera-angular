@@ -32,12 +32,17 @@
     narrowedMenu.searchTerm = "";
 
     narrowedMenu.getMatchedMenuItems = function () {
-      MenuSearchService.getMatchedMenuItems(narrowedMenu.searchTerm)
-      .then (function (response) {
-        MenuSearchService.foundItems = response;
+      if (narrowedMenu.searchTerm) {
+        MenuSearchService.getMatchedMenuItems(narrowedMenu.searchTerm)
+        .then (function (response) {
+          MenuSearchService.foundItems = response;
+          narrowedMenu.found = MenuSearchService.foundItems;
+        });
+      } else {
+        MenuSearchService.foundItems = [];
         narrowedMenu.found = MenuSearchService.foundItems;
-      });
-      
+      }
+
     }
 
     narrowedMenu.removeFoundItem = function (itemIndex) {
