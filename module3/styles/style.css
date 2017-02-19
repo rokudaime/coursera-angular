@@ -1,0 +1,18 @@
+ul {
+	padding: 0;
+}
+li {
+	list-style: none;
+	padding: 5px 10px;
+	border: 1px solid #e2e2e2;
+	margin-bottom: 10px;
+}
+
+.menu-item:hover {
+	border-color: #666;
+}
+
+/*.btn-default:hover {
+	border-color: red;
+	color: red;
+}*/

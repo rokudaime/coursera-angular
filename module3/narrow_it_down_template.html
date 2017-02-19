@@ -1,0 +1,16 @@
+<h3 ng-if="narrowedMenu.foundItems">Results: {{ narrowedMenu.foundItems.length }}</h3>
+<ul>
+  <li  class="menu-item" ng-repeat="menuItem in narrowedMenu.foundItems">
+    <div class="row">
+      <div class="col-md-10">
+        <table>
+          <tr><th>{{ menuItem.name }} ({{ menuItem.short_name}})</th></tr>
+          <tr><td>{{ menuItem.description}}</td></tr>
+        </table>
+      </div>
+      <div class="col-md-2">
+        <button ng-click="narrowedMenu.onRemove({index: $index})" class="btn btn-default">Don't want this item</button>
+      </div>
+    </div>
+   </li>
+</ul>
